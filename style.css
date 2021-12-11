@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI';
+    color: white;
+}
+
+body{
+    background: rgb(3,169,244);
+    background: linear-gradient(90deg, rgba(3,169,244,1) 0%, rgba(63,81,181,1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+    margin: 2vh 0;
+    font-size: 10vmin;
+}
+
+#tdl_control{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(3, 228, 244,0.3);
+    padding: 2vh;
+    width: 90%;
+    backdrop-filter: blur(5px);
+    border-radius: 10vmax;
+    height: 10vh;
+    box-shadow:
+        0 0 4vh #0003,
+        inset 2vh 2vh 4vh #fff3,
+        inset 1vh 1vh 4vh #8883
+    ;
+}
+
+#tdl_control > input{
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 85%;
+    border-radius: 10vmax;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: black;
+    font-size: 4vh;
+    padding: 2vh;
+}
+#tdl_control > button{
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 13%;
+    border-radius: 10vmax;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    color: black;
+    font-size: 4vh;
+    padding: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#tdl{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin: 2vh 0;
+}
+
+.tdl{
+    width: 100%;
+    background-color: rgba(3, 228, 244,0.3);
+    padding: 2vh;
+    backdrop-filter: blur(5px);
+    border-radius: 2vh;
+    box-shadow:
+        0 0 4vh #0003,
+        inset 2vh 2vh 4vh #fff3,
+        inset 1vh 1vh 4vh #8883
+    ;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vh;
+    justify-content: center;
+    margin-bottom: 2vh;
+}
+
+.tdl > h2{
+    flex-basis: 100%;
+    font-size: 5vh;
+}
+
+.tdl.task_done > h2{
+    text-decoration: line-through;
+    color: #e2e2e2;
+}
+
+.tdl.task_done{
+    background-color:rgba(63,81,181,0.3);
+}
+
+.tdl.task_done > .done{
+    background-color: #d2d2d2;
+    pointer-events: none;
+}
+
+.done, .delete{
+    flex-basis: 48.5%;
+    width: 50%;
+    outline: none;
+    border: none;
+    height: fit-content;
+    border-radius: 2vh;
+    color: black;
+    font-size: 2vh;
+    padding: 1.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.delete{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.done{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
